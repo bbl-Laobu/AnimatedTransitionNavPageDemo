@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AnimatedTransitionNavPageDemo.Views.LowerNavigationBar">
+    <!-- -->
+    <!-- NavigationBar -->
+    <!-- -->
+    <StackLayout x:Name="NavBarLayout" BackgroundColor="#700606" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Padding="0" Spacing="0" HeightRequest="40">
+        <!-- Button Label -->
+        <!-- -->
+        <StackLayout x:Name="NavBarButton" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="0" Spacing="0">
+            <BoxView Color="Transparent" HorizontalOptions="CenterAndExpand" HeightRequest="1" />
+            <Label x:Name="NavBarButtonLabel" Text="Start demo" FontSize="Medium" FontAttributes="Bold" TextColor="White" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnNavBarButtonLabelTappedAsync" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+
+        </StackLayout>
+    </StackLayout>
+</ContentView>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="AnimatedTransitionNavPageDemo.Views.AppIntroView">
+    <ScrollView BackgroundColor="White">
+        <StackLayout Padding="12" Spacing="12">
+            <Label TextColor="Black" FontSize="Large" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Text="Welcome to the SlideMenu Demo." />
+            <Label TextColor="Black" HorizontalOptions="StartAndExpand" Text="A simple demo application demonstrating how to create a SlideMenu using only Xamarin Forms." />
+            <BoxView Color="Gray" HorizontalOptions="FillAndExpand" HeightRequest="1" />
+            <Label TextColor="Black" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Text="Description :" />
+            <Label TextColor="Black" HorizontalOptions="StartAndExpand" Text="The demo uses a combination of Grid Layout, Layers and Translate Animation to create a smooth Slide Menu when tapping the menu button at the bottom." />
+            <Label TextColor="Black" HorizontalOptions="StartAndExpand" Text="A SlideUpMenuView defines the layout of the menu. This view is then used twice in the StartPage; once for the animation of sliding the menu up/down and once for detecting interactions when open." />
+            <Label TextColor="Blue" HorizontalOptions="StartAndExpand" Text="For more info please see the SlideMenuDemo ReadMe on Github.">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Handle_Clicked" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label TextColor="Black" HorizontalOptions="StartAndExpand" Text="Enjoy,&#xA;Laobu!" />
+        </StackLayout>
+    </ScrollView>
+</ContentView>

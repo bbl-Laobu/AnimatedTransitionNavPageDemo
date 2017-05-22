@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using AnimatedTransitionNavPageDemo.Pages;
+using Xamarin.Forms;
 
 namespace AnimatedTransitionNavPageDemo
 {
@@ -8,7 +9,7 @@ namespace AnimatedTransitionNavPageDemo
         {
             InitializeComponent();
 
-            MainPage = new AnimatedTransitionNavPageDemoPage();
+            MainPage = new NavigationPage(new StartPage());
         }
 
         protected override void OnStart()

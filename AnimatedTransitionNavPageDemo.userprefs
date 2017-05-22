@@ -1,10 +1,15 @@
 ﻿<Properties StartupConfiguration="{CB9EA35A-12A3-4529-8C5D-7E399E0038FC}|Default">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.ItemProperties.AnimatedTransitionNavPageDemo.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AnimatedTransitionNavPageDemo.git Status">
+    <Files>
+      <File FileName="AnimatedTransitionNavPageDemo.git Status" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.AnimatedTransitionNavPageDemo.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.19AED3B2-6061-4A23-BEB3-F41A28A516C9" />
+  <MonoDevelop.Ide.ItemProperties.AnimatedTransitionNavPageDemo.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.15244AA2-DCEA-4E27-B044-B52459E835E7" />
   <MultiItemStartupConfigurations />
 </Properties>

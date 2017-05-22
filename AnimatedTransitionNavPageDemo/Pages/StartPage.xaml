@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:views="clr-namespace:AnimatedTransitionNavPageDemo.Views" x:Class="AnimatedTransitionNavPageDemo.Pages.StartPage"   
+    Title="Start Page">
+    <!-- -->
+    <!-- Start Page (Carousel + Menu) -->
+    <!-- -->
+    <ContentPage.Content>
+        <Grid x:Name="MenuContentLayout" RowSpacing="0" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition x:Name="GridRow0" Height="*" />
+                <RowDefinition x:Name="GridRow1" Height="200" />
+                <RowDefinition x:Name="gridRow2" Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <!-- -->
+            <!-- Content AppIntroView-->
+            <StackLayout Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" BackgroundColor="#700606" Orientation="Vertical" VerticalOptions="Start" Padding="0" Spacing="0">
+                <views:AppIntroView />
+            </StackLayout>
+            <!-- -->
+            <!-- Navigation LowerNavigationBar-->
+            <StackLayout  Grid.Row="2" Grid.Column="0" BackgroundColor="#700606" Orientation="Vertical" VerticalOptions="Start" Padding="0" Spacing="0" HeightRequest="240">
+                <views:LowerNavigationBar />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

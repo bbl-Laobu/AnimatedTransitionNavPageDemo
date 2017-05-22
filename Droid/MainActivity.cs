@@ -22,6 +22,8 @@ namespace AnimatedTransitionNavPageDemo.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
+            FormsControls.Droid.Main.Init(this);
+
             LoadApplication(new App());
         }
     }

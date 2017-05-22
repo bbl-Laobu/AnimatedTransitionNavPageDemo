@@ -14,6 +14,8 @@ namespace AnimatedTransitionNavPageDemo.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
+            FormsControls.Touch.Main.Init();
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

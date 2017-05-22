@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="AnimatedTransitionNavPageDemo.Pages.BBLGitHubWebPage" Title="Readme">
+    <ContentPage.Content>
+        <StackLayout >
+            <StackLayout x:Name="LoadingLayout" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" >
+                <Label x:Name="LoadingLabel" Text="Loading..." HorizontalOptions="Center" IsVisible="true" />
+                <ActivityIndicator x:Name="IndicatorActiviry" IsRunning="true" />
+            </StackLayout>
+
+            <WebView x:Name="Browser"  Navigating="webOnNavigating" Navigated="webOnEndNavigating" 
+                        Source="https://github.com/bbl-Laobu/SlideMenuDemo/blob/master/README.md" 
+                        HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
