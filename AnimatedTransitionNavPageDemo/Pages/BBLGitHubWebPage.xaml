@@ -9,7 +9,7 @@
             </StackLayout>
 
             <WebView x:Name="Browser"  Navigating="webOnNavigating" Navigated="webOnEndNavigating" 
-                        Source="https://github.com/bbl-Laobu/SlideMenuDemo/blob/master/README.md" 
+                        Source="https://github.com/bbl-Laobu/AnimatedTransitionNavPageDemo/blob/master/README.md" 
                         HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
         </StackLayout>
     </ContentPage.Content>

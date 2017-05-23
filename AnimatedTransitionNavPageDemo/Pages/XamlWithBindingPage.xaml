@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- A Animation Page is defined here as tag -->
+<!-- -->
+<controls:AnimationPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:controls="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
+    x:Class="AnimatedTransitionNavPageDemo.Pages.XamlWithBindingPage" 
+    NavigationPage.BackButtonTitle="Back"
+    Title="XAML With Binding"
+    PageAnimation="{Binding MyPageAnimation}">
+    <!-- BINDING OF THE PAGENAVIGATION HAPPENS HERE ABOVE-->
+    <!-- -->
+
+    <!-- Normal Layout can now start here -->
+    <StackLayout Margin="10,10,10,0">
+        <!-- Title -->
+        <!-- -->
+        <Label TextColor="Black" FontSize="Large" FontAttributes="Bold" HorizontalOptions="StartAndExpand" 
+        Text="XAML Implemented - With Binding" />
+        <!-- Small Description -->
+        <!-- -->
+        <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+        Text="Page Transition is achieved by implementing XAML Code with binding. " 
+        FontSize="Small"/>
+        <BoxView Color="Gray" HorizontalOptions="FillAndExpand" HeightRequest="1" />
+        <!-- Transition -->
+        <!-- -->
+        <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+        Text="Transition:" FontAttributes="Bold"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+            <BoxView Color="Transparent" HeightRequest="1" WidthRequest="20" HorizontalOptions="StartAndExpand" />
+            <StackLayout Orientation="Vertical">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                    <Label TextColor="Black" HorizontalOptions="StartAndExpand" Text="Type: " FontSize="Small" />
+                    <Label TextColor="Black" HorizontalOptions="StartAndExpand" Text="{Binding TypeText}" FontSize="Small" />
+                </StackLayout> 
+                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                    <Label TextColor="Black" HorizontalOptions="StartAndExpand" Text="SubType: " FontSize="Small" />
+                    <Label TextColor="Black" HorizontalOptions="StartAndExpand" Text="{Binding SubTypeText}" FontSize="Small" />
+                </StackLayout> 
+                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                    <Label TextColor="Black" HorizontalOptions="StartAndExpand" Text="Duration: " FontSize="Small" />
+                    <Label TextColor="Black" HorizontalOptions="StartAndExpand" Text="{Binding DurationText}" FontSize="Small" />
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+        <!-- BreakLine -->
+        <!-- -->
+        <BoxView Color="Transparent" HorizontalOptions="FillAndExpand" HeightRequest="20" />
+        <!-- See in code: -->
+        <!-- -->
+        <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+        Text="See in Code:" FontAttributes="Bold"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+            <BoxView Color="Transparent" HeightRequest="1" WidthRequest="20" HorizontalOptions="StartAndExpand" />
+            <StackLayout Orientation="Vertical">
+                <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                    Text="AnimatedTransitionNavPageDemo." FontSize="Small"/>
+                <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                    Text="Pages." FontSize="Small" />
+                <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                    Text="XamlWithBindingPage.xaml" FontSize="Small" />
+                <BoxView Color="Transparent" HorizontalOptions="FillAndExpand" HeightRequest="20" />
+                <!-- Note -->
+                <!-- -->
+                <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                    Text="Note: " 
+                FontSize="Small" FontAttributes="Bold"/>
+                <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                    Text="The Code Behind must now inherit from AnimationPage." 
+                FontSize="Small" />
+                <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                    Text="Thanks to the Binding, we are able to apply different transitions to the the same class (see DemoOverviewPage.xaml.cs)." 
+                    FontSize="Small" />
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</controls:AnimationPage>

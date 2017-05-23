@@ -3,13 +3,32 @@
     x:Class="AnimatedTransitionNavPageDemo.Views.AppIntroView">
     <ScrollView BackgroundColor="White">
         <StackLayout Padding="12" Spacing="12">
-            <Label TextColor="Black" FontSize="Large" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Text="Welcome to the SlideMenu Demo." />
-            <Label TextColor="Black" HorizontalOptions="StartAndExpand" Text="A simple demo application demonstrating how to create a SlideMenu using only Xamarin Forms." />
+            <Label TextColor="Black" FontSize="Large" FontAttributes="Bold" HorizontalOptions="StartAndExpand" 
+                Text="Welcome to the Custom Page Transitions Demo." />
+            <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                Text="Using the AnimationNavPage Component we can demonstrate how to create a custom transition between different pages." />
             <BoxView Color="Gray" HorizontalOptions="FillAndExpand" HeightRequest="1" />
-            <Label TextColor="Black" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Text="Description :" />
-            <Label TextColor="Black" HorizontalOptions="StartAndExpand" Text="The demo uses a combination of Grid Layout, Layers and Translate Animation to create a smooth Slide Menu when tapping the menu button at the bottom." />
-            <Label TextColor="Black" HorizontalOptions="StartAndExpand" Text="A SlideUpMenuView defines the layout of the menu. This view is then used twice in the StartPage; once for the animation of sliding the menu up/down and once for detecting interactions when open." />
-            <Label TextColor="Blue" HorizontalOptions="StartAndExpand" Text="For more info please see the SlideMenuDemo ReadMe on Github.">
+
+            <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                Text="To demonstrate and achieve different types of Transitions between navigation pages, we are using the excellent ‘AnimationNavPage Component’ written by AlexandrNikulin. " />
+            <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                Text="For this demo, we are using the trial version but you can easily purchase a full version on the component website (see Readme)." />
+            <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                Text="Set-up and using the component happens in 3 steps:" />
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                <BoxView Color="Transparent" HeightRequest="1" WidthRequest="20" HorizontalOptions="StartAndExpand" />
+                <StackLayout Orientation="Vertical">
+                    <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                        Text="1. Install and reference the DLL" />
+                    <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                        Text="2. Declare AnimationNavigationPage" />
+                    <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                        Text="3. Create and Animation page " />
+                </StackLayout>
+            </StackLayout>
+            
+            <Label TextColor="Blue" HorizontalOptions="StartAndExpand" Text="For further info please tap on 'Start Demo' or see the AnimatedTransitionNavPageDemo ReadMe on Github.">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="Handle_Clicked" NumberOfTapsRequired="1" />
                 </Label.GestureRecognizers>

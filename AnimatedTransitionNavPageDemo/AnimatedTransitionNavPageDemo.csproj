@@ -38,10 +38,19 @@
     <EmbeddedResource Include="Views\LowerNavigationBar.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\RotateAnimationPage.xaml">
+    <EmbeddedResource Include="Pages\InterfaceImplementedPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\BBLGitHubWebPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\DemoOverviewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\XamlNoBindingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\XamlWithBindingPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -59,11 +68,21 @@
     <Compile Include="Views\LowerNavigationBar.xaml.cs">
       <DependentUpon>LowerNavigationBar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\RotateAnimationPage.xaml.cs">
-      <DependentUpon>RotateAnimationPage.xaml</DependentUpon>
+    <Compile Include="Pages\InterfaceImplementedPage.xaml.cs">
+      <DependentUpon>InterfaceImplementedPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\BBLGitHubWebPage.xaml.cs">
       <DependentUpon>BBLGitHubWebPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DemoOverviewPage.xaml.cs">
+      <DependentUpon>DemoOverviewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\TransitionViewModel.cs" />
+    <Compile Include="Pages\XamlNoBindingPage.xaml.cs">
+      <DependentUpon>XamlNoBindingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\XamlWithBindingPage.xaml.cs">
+      <DependentUpon>XamlWithBindingPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -79,9 +98,13 @@
     <Reference Include="FormsControls.Base">
       <HintPath>..\lib\pcl\FormsControls.Base.dll</HintPath>
     </Reference>
+    <Reference Include="PropertyChanged">
+      <HintPath>..\packages\PropertyChanged.Fody.1.53.0\lib\portable-net4+sl4+wp8+win8+wpa81+MonoAndroid16+MonoTouch40\PropertyChanged.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="FodyWeavers.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\" />
@@ -90,4 +113,5 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+  <Import Project="..\packages\Fody.2.0.0\build\portable-net+sl+win+wpa+wp\Fody.targets" Condition="Exists('..\packages\Fody.2.0.0\build\portable-net+sl+win+wpa+wp\Fody.targets')" />
 </Project>

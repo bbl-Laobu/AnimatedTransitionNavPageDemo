@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<controls:AnimationPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
+    x:Class="AnimatedTransitionNavPageDemo.Pages.DemoOverviewPage"
+    NavigationPage.BackButtonTitle="Back"
+    BackgroundColor="Silver"
+    Title="Demo Overview">
+    <controls:AnimationPage.PageAnimation>
+        <controls:SlidePageAnimation Duration="Medium" Subtype="FromBottom" />
+    </controls:AnimationPage.PageAnimation>
+    <Grid x:Name="MenuContentLayout" RowSpacing="0" ColumnSpacing="0" Margin="10,10,10,0" >
+            <Grid.RowDefinitions>
+                <RowDefinition x:Name="ROW0" Height="100" />
+                <RowDefinition x:Name="ROW1" Height="30" />
+                <RowDefinition x:Name="ROW2" Height="50" />
+                <RowDefinition x:Name="ROW3" Height="50" />
+                <RowDefinition x:Name="ROW4" Height="50" />
+                <RowDefinition x:Name="ROW5" Height="30" />
+                <RowDefinition x:Name="ROW6" Height="50" />
+                <RowDefinition x:Name="ROW7" Height="50" />
+                <RowDefinition x:Name="ROW8" Height="50" />
+                <RowDefinition x:Name="ROW9" Height="50" />
+                <RowDefinition x:Name="ROW10" Height="50" />
+                <RowDefinition x:Name="ROW11" Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="300" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" 
+                Text="Tapping on the following buttons displays the result of the different possible implementations of the AnimationNavPage component." FontAttributes="Bold" HorizontalOptions="Center"/>
+            <Label Grid.Row="1" Grid.Column="1" Text="NO BINDING" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <Button Grid.Row="2" Grid.Column="1" Text="Flip From Top - Interface Implemented" x:Name="Button1" BackgroundColor="Teal" TextColor="White"  BorderColor="Gray" Margin="5" BorderWidth="1" HorizontalOptions="CenterAndExpand" WidthRequest="300" Clicked="Button1_Clicked"/>
+            <Button Grid.Row="3" Grid.Column="1" Text="Rotate From Left - XAML No Binding" x:Name="Button2" BackgroundColor="Teal" TextColor="White" BorderColor="Gray" Margin="5" BorderWidth="1" HorizontalOptions="CenterAndExpand" WidthRequest="300" Clicked="Button2_Clicked"/>
+            <Label Grid.Row="5" Grid.Column="1" Text="XAML WITH BINDING" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <Button Grid.Row="6" Grid.Column="1" Text="Slide From Top" x:Name="Button3" BackgroundColor="Teal" TextColor="White" BorderColor="Gray" Margin="5" BorderWidth="1"  HorizontalOptions="CenterAndExpand"  WidthRequest="300" Clicked="Button3_Clicked"/>
+            <Button Grid.Row="7" Grid.Column="1" Text="Fade From Right" x:Name="Button4" BackgroundColor="Teal" TextColor="White" BorderColor="Gray" Margin="5" BorderWidth="1"  HorizontalOptions="CenterAndExpand"  WidthRequest="300" Clicked="Button4_Clicked"/>
+            <Button Grid.Row="8" Grid.Column="1" Text="Push From Bottom" x:Name="Button5" BackgroundColor="Teal" TextColor="White" BorderColor="Gray" Margin="5" BorderWidth="1"  HorizontalOptions="CenterAndExpand"  WidthRequest="300" Clicked="Button5_Clicked"/>
+            <Button Grid.Row="9" Grid.Column="1" Text="Roll From Left" x:Name="Button6" BackgroundColor="Teal" TextColor="White" BorderColor="Gray" Margin="5" BorderWidth="1"  HorizontalOptions="CenterAndExpand"  WidthRequest="300" Clicked="Button6_Clicked"/>
+            <Button Grid.Row="10" Grid.Column="1" Text="Landing From Top" x:Name="Button7" BackgroundColor="Teal" TextColor="White" BorderColor="Gray" Margin="5" BorderWidth="1"  HorizontalOptions="CenterAndExpand"  WidthRequest="300" Clicked="Button7_Clicked"/>
+    </Grid>
+</controls:AnimationPage>

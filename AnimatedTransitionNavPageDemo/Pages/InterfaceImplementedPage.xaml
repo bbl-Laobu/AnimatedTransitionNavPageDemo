@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="AnimatedTransitionNavPageDemo.Pages.InterfaceImplementedPage"
+    NavigationPage.BackButtonTitle="Back"
+    Title="Interface Implemented">
+    <StackLayout Margin="10,10,10,0">
+        <!-- Title -->
+        <!-- -->
+        <Label TextColor="Black" FontSize="Large" FontAttributes="Bold" HorizontalOptions="StartAndExpand" 
+        Text="IAnimationPage Implemented" />
+        <!-- Small Description -->
+        <!-- -->
+        <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+        Text="Page Transition is achieved by implementing the IAnimationPage Interface in the code behind file." 
+        FontSize="Small"/>
+        <BoxView Color="Gray" HorizontalOptions="FillAndExpand" HeightRequest="1" />
+        <!-- Transition -->
+        <!-- -->
+        <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+        Text="Transition:" FontAttributes="Bold"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+            <BoxView Color="Transparent" HeightRequest="1" WidthRequest="20" HorizontalOptions="StartAndExpand" />
+            <StackLayout Orientation="Vertical">
+                <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                    Text="Type: Flip" FontSize="Small" />
+                <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                    Text="SubType: FromTop" FontSize="Small" />
+                <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                    Text="Duration: Long" FontSize="Small" />
+            </StackLayout>
+        </StackLayout>
+        <!-- BreakLine -->
+        <!-- -->
+        <BoxView Color="Transparent" HorizontalOptions="FillAndExpand" HeightRequest="20" />
+        <!-- See in code: -->
+        <!-- -->
+        <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+        Text="See in Code:" FontAttributes="Bold"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+            <BoxView Color="Transparent" HeightRequest="1" WidthRequest="20" HorizontalOptions="StartAndExpand" />
+            <StackLayout Orientation="Vertical">
+                <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                    Text="AnimatedTransitionNavPageDemo." FontSize="Small"/>
+                <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                    Text="Pages." FontSize="Small" />
+                <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                    Text="InterfaceImplementedPage.xaml.cs" FontSize="Small" />
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

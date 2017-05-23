@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- A Animation Page is defined here as tag -->
+<!-- -->
+<controls:AnimationPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:controls="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
+    NavigationPage.BackButtonTitle="Back"
+    x:Class="AnimatedTransitionNavPageDemo.Pages.XamlNoBindingPage" 
+    Title="XAML No Binding">
+    <!-- A Page Animation Type is defined here -->
+    <!-- -->
+    <controls:AnimationPage.PageAnimation>
+        <controls:RotatePageAnimation Duration="Medium" Subtype="FromLeft" />
+    </controls:AnimationPage.PageAnimation>
+
+    <!-- Normal Layout can now start here -->
+    <StackLayout Margin="10,10,10,0">
+        <!-- Title -->
+        <!-- -->
+        <Label TextColor="Black" FontSize="Large" FontAttributes="Bold" HorizontalOptions="StartAndExpand" 
+        Text="XAML Implemented - No Binding" />
+        <!-- Small Description -->
+        <!-- -->
+        <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+        Text="Page Transition is achieved by implementing XAML Code but wihtout binding." 
+        FontSize="Small"/>
+        <BoxView Color="Gray" HorizontalOptions="FillAndExpand" HeightRequest="1" />
+        <!-- Transition -->
+        <!-- -->
+        <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+        Text="Transition:" FontAttributes="Bold"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+            <BoxView Color="Transparent" HeightRequest="1" WidthRequest="20" HorizontalOptions="StartAndExpand" />
+            <StackLayout Orientation="Vertical">
+                <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                    Text="Type: Flip" FontSize="Small" />
+                <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                    Text="SubType: FromTop" FontSize="Small" />
+                <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                    Text="Duration: Medium" FontSize="Small" />
+            </StackLayout>
+        </StackLayout>
+        <!-- BreakLine -->
+        <!-- -->
+        <BoxView Color="Transparent" HorizontalOptions="FillAndExpand" HeightRequest="20" />
+        <!-- See in code: -->
+        <!-- -->
+        <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+        Text="See in Code:" FontAttributes="Bold"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+            <BoxView Color="Transparent" HeightRequest="1" WidthRequest="20" HorizontalOptions="StartAndExpand" />
+            <StackLayout Orientation="Vertical">
+                <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                    Text="AnimatedTransitionNavPageDemo." FontSize="Small"/>
+                <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                    Text="Pages." FontSize="Small" />
+                <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                    Text="XamlNoBindingPage.xaml" FontSize="Small" />
+                <BoxView Color="Transparent" HorizontalOptions="FillAndExpand" HeightRequest="20" />
+                <!-- Note -->
+                <!-- -->
+                <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                    Text="Note: " 
+                FontSize="Small" FontAttributes="Bold"/>
+                <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                    Text="The Code Behind must now inherit from AnimationPage. " 
+                    FontSize="Small" />
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</controls:AnimationPage>

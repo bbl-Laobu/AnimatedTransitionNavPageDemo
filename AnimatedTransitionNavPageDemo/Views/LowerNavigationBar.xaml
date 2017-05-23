@@ -9,7 +9,7 @@
         <!-- -->
         <StackLayout x:Name="NavBarButton" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="0" Spacing="0">
             <BoxView Color="Transparent" HorizontalOptions="CenterAndExpand" HeightRequest="1" />
-            <Label x:Name="NavBarButtonLabel" Text="Start demo" FontSize="Medium" FontAttributes="Bold" TextColor="White" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center">
+            <Label x:Name="NavBarButtonLabel" Text="Start Demo" FontSize="Medium" FontAttributes="Bold" TextColor="White" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnNavBarButtonLabelTappedAsync" NumberOfTapsRequired="1" />
                 </Label.GestureRecognizers>

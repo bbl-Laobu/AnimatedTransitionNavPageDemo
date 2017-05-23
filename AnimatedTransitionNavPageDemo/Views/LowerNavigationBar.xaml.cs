@@ -12,7 +12,7 @@ namespace AnimatedTransitionNavPageDemo.Views
 
 		async void OnNavBarButtonLabelTappedAsync(object sender, System.EventArgs e)
 		{
-			await Navigation.PushAsync(new RotateAnimationPage());
+			await Navigation.PushAsync(new DemoOverviewPage());
 		}
     }
 }
