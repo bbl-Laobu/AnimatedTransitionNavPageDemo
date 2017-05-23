@@ -19,6 +19,19 @@ Download the ‘customnavpage’ package from https://components.xamarin.com/vie
 
 ![PCL](https://github.com/bbl-Laobu/AnimatedTransitionNavPageDemo/raw/master/PCLRef.png) ![Android](https://github.com/bbl-Laobu/AnimatedTransitionNavPageDemo/raw/master/AndroidRef.png) ![IOS](https://github.com/bbl-Laobu/AnimatedTransitionNavPageDemo/raw/master/IOSRef.png)
 
+## DECLARE ANIMATIONNAVIGATIONPAGE
+In your App, declare your new main page as follows:
+```csharp  
+public class App : Application
+{
+        public App()
+        {
+            InitializeComponent();
+            MainPage = new AnimationNavigationPage(new StartPage());
+        }
+}
+```
+
 Enjoy and any question or improvements, please let me know.
 
 Laobu!
