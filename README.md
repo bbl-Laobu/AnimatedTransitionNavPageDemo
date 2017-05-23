@@ -4,6 +4,7 @@ A simple but effective Xamarin Forms SlideMenu Demo
 ## INTRODUCTION
 Using the [AnimationNavPage Component](https://components.xamarin.com/view/customnavpage) we can demonstrate how to create a custom transition between different pages.
 
+![demo](https://github.com/bbl-Laobu/AnimatedTransitionNavPageDemo/raw/master/demo.gif)
 
 ## DESCRIPTION
 To demonstrate and achieve different types of Transitions between navigation pages, we are using the excellent ‘AnimationNavPage Component’ written by AlexandrNikulin (price $26). 
