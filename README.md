@@ -17,7 +17,7 @@ Setting-up and using the component happens in 3 steps:
 ## INSTALL
 Download the ‘customnavpage’ package from https://components.xamarin.com/view/customnavpage . You can easily donwload a trial version from the site. Copy the included lib folder into your solution and link the following DLL’s to your different projects (PCL, Andoid and IOS) as shown below
 
-![PCL](https://github.com/bbl-Laobu/AnimatedTransitionNavPageDemo/raw/master/PCLRef.png)
+![PCL](https://github.com/bbl-Laobu/AnimatedTransitionNavPageDemo/raw/master/PCLRef.png) ![Android](https://github.com/bbl-Laobu/AnimatedTransitionNavPageDemo/raw/master/AndroidRef.png)
 
 Enjoy and any question or improvements, please let me know.
 
