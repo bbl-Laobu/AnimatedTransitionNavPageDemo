@@ -74,17 +74,52 @@ Next, use the <controls:AnimationPage> tag instead of the <ContentPage> tag as f
     Title="XAML No Binding">
 ```
 
+In the above case, we are not using binding so next we must declare a tag in the page to specify which transition we would like to use:
+```xaml
+<controls:AnimationPage.PageAnimation>
+   <controls:RotatePageAnimation Duration="Medium" Subtype="FromLeft" />
+</controls:AnimationPage.PageAnimation>
+```
+
+Notice that here we are declaring a RotatePageAnimation, but again we can pick whatever Animation we want and is available. Properties are available to further customize the animation (duration, subtype…).
+
+After this you are now able to configure your page as you would in a normal content page.
 
 
+## OPTION 2b - Use XAML  with BINDING
+The component allows you to bind the PageAnimation. To do this declare the <controls:AnimationPage> as follows:
+```xaml 
+<controls:AnimationPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:controls="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
+    x:Class="AnimatedTransitionNavPageDemo.Pages.XamlWithBindingPage" 
+    NavigationPage.BackButtonTitle="Back"
+    Title="XAML With Binding"
+    PageAnimation="{Binding MyPageAnimation}">
+```
+
+In this case Your ViewModel should then have a ‘MyPageAnimation’ property defined:
+```csharp 
+public IPageAnimation MyPageAnimation { get; set; }
+```
+
+This property can then be set in the following way:
+```csharp 
+MyPageAnimation = new SlidePageAnimation()
+  {
+  	Duration = AnimationDuration.Long,
+	Subtype = AnimationSubtype.FromTop
+  };
+```
+
+Again, we can use different types of animations and further configure the properties.
 
 Enjoy and any question or improvements, please let me know.
-
 Laobu!
-
 
 ## REFERENCES
 - ‘AnimationNavPage’ By AlexandrNikulin @ [https://components.xamarin.com/view/customnavpage   ](https://components.xamarin.com/view/customnavpage ) 
 
 
-Author
+## Author
 Laobu – Bernard Blanckaert
