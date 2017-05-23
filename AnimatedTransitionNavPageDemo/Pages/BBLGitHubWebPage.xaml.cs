@@ -1,8 +1,9 @@
-﻿using Xamarin.Forms;
+﻿using FormsControls.Base;
+using Xamarin.Forms;
 
 namespace AnimatedTransitionNavPageDemo.Pages
 {
-    public partial class BBLGitHubWebPage : ContentPage
+    public partial class BBLGitHubWebPage : ContentPage, IAnimationPage
     {
         public BBLGitHubWebPage()
         {
@@ -24,6 +25,23 @@ namespace AnimatedTransitionNavPageDemo.Pages
             IndicatorActiviry.IsRunning = false;
             IndicatorActiviry.IsVisible = false;
             LoadingLayout.IsVisible = false;
+		}
+
+		// ---------------------------------------------------------------------
+		// Transition by Implementing IAnimation Interface 
+		// ---------------------------------------------------------------------
+
+		public IPageAnimation PageAnimation { get; } = new FlipPageAnimation { Duration = AnimationDuration.Medium, 
+            Subtype = AnimationSubtype.FromRight };
+
+		public void OnAnimationStarted(bool isPopAnimation)
+		{
+			// Put your code here
+		}
+
+		public void OnAnimationFinished(bool isPopAnimation)
+		{
+			// Put your code here
 		}
     }
 }

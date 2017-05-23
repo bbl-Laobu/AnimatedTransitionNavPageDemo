@@ -9,7 +9,9 @@
     <controls:AnimationPage.PageAnimation>
         <controls:SlidePageAnimation Duration="Medium" Subtype="FromBottom" />
     </controls:AnimationPage.PageAnimation>
-    <Grid x:Name="MenuContentLayout" RowSpacing="0" ColumnSpacing="0" Margin="10,10,10,0" >
+    
+    <ScrollView>
+        <Grid x:Name="MenuContentLayout" RowSpacing="0" ColumnSpacing="0" Margin="10,10,10,0" >
             <Grid.RowDefinitions>
                 <RowDefinition x:Name="ROW0" Height="100" />
                 <RowDefinition x:Name="ROW1" Height="30" />
@@ -40,5 +42,6 @@
             <Button Grid.Row="8" Grid.Column="1" Text="Push From Bottom" x:Name="Button5" BackgroundColor="Teal" TextColor="White" BorderColor="Gray" Margin="5" BorderWidth="1"  HorizontalOptions="CenterAndExpand"  WidthRequest="300" Clicked="Button5_Clicked"/>
             <Button Grid.Row="9" Grid.Column="1" Text="Roll From Left" x:Name="Button6" BackgroundColor="Teal" TextColor="White" BorderColor="Gray" Margin="5" BorderWidth="1"  HorizontalOptions="CenterAndExpand"  WidthRequest="300" Clicked="Button6_Clicked"/>
             <Button Grid.Row="10" Grid.Column="1" Text="Landing From Top" x:Name="Button7" BackgroundColor="Teal" TextColor="White" BorderColor="Gray" Margin="5" BorderWidth="1"  HorizontalOptions="CenterAndExpand"  WidthRequest="300" Clicked="Button7_Clicked"/>
-    </Grid>
+        </Grid>
+    </ScrollView>
 </controls:AnimationPage>
