@@ -31,6 +31,51 @@ public class App : Application
         }
 }
 ```
+## CREATE AND ANIMATION PAGE
+There are 2 ways to create an Animation Page:
+1.	Implement the IAnimationPage interface
+2.	Use XAML Tags 
+
+## OPTION 1 - Implement the IAnimationPage interface
+Firstly, add the interface declaration to your class definition as follows:
+```csharp  
+public partial class InterfaceImplementedPage : ContentPage, IAnimationPage 
+```
+
+Next, add the following code to the class:
+```csharp  
+public IPageAnimation PageAnimation { get; } = new FlipPageAnimation { Duration = AnimationDuration.Long, Subtype = AnimationSubtype.FromTop };
+
+public void OnAnimationStarted(bool isPopAnimation)
+{
+	// Put your code here but leaving empty works just fine
+}
+
+public void OnAnimationFinished(bool isPopAnimation)
+{
+	// Put your code here but leaving empty works just fine
+}
+```
+
+Note that depending on the type of transition you want, you can change FlipPageAnimation into SlidePageAnimation, FadePageAnimation… or whichever animation you require. Further configuration such as Duration and Subtype can be easily done.
+
+## OPTION 2 - Use XAML 
+Firstly, make sure that the code behind inherits from AnimationPage:
+```csharp  
+public partial class XamlNoBindingPage : AnimationPage
+```
+
+Next, use the <controls:AnimationPage> tag instead of the <ContentPage> tag as follows: 
+```xaml  
+<controls:AnimationPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:controls="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
+    x:Class="AnimatedTransitionNavPageDemo.Pages.XamlNoBindingPage" 
+    Title="XAML No Binding">
+```
+
+
+
 
 Enjoy and any question or improvements, please let me know.
 
