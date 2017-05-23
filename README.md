@@ -121,5 +121,5 @@ Laobu!
 - ‘AnimationNavPage’ By AlexandrNikulin @ [https://components.xamarin.com/view/customnavpage   ](https://components.xamarin.com/view/customnavpage ) 
 
 
-## Author
+## AUTHOR
 Laobu – Bernard Blanckaert
