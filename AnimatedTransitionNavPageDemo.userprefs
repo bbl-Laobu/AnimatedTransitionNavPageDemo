@@ -1,5 +1,4 @@
 ﻿<Properties StartupConfiguration="{CB9EA35A-12A3-4529-8C5D-7E399E0038FC}|Default" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.ItemProperties.AnimatedTransitionNavPageDemo.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="AnimatedTransitionNavPageDemo.git Status">
     <Files>
       <File FileName="AnimatedTransitionNavPageDemo.git Status" />

@@ -12,7 +12,7 @@
             <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
                 Text="To demonstrate and achieve different types of Transitions between navigation pages, we are using the excellent ‘AnimationNavPage Component’ written by AlexandrNikulin. " />
             <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
-                Text="For this demo, we are using the trial version but you can easily purchase a full version on the component website (see Readme)." />
+                Text="For this demo, we are using the trial version but you can easily purchase a full version on the component website (see link below)." />
             <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
                 Text="Set-up and using the component happens in 3 steps:" />
 
@@ -28,11 +28,13 @@
                 </StackLayout>
             </StackLayout>
             
-            <Label TextColor="Blue" HorizontalOptions="StartAndExpand" Text="For further info please tap on 'Start Demo' or see the AnimatedTransitionNavPageDemo ReadMe on Github.">
+            <Label TextColor="Blue" HorizontalOptions="StartAndExpand" Text="For further info please see the AnimatedTransitionNavPageDemo ReadMe on Github.">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="Handle_Clicked" NumberOfTapsRequired="1" />
                 </Label.GestureRecognizers>
             </Label>
+            <Label TextColor="Black" HorizontalOptions="StartAndExpand" 
+                Text="Now, time to press 'Start Demo' and see what the code does." />
             <Label TextColor="Black" HorizontalOptions="StartAndExpand" Text="Enjoy,&#xA;Laobu!" />
         </StackLayout>
     </ScrollView>
