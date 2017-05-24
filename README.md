@@ -1,5 +1,5 @@
 # CUSTOM PAGE TRANSITIONS
-A simple but effective Xamarin Forms SlideMenu Demo
+A Simple Custom Animated Page Transitions Demonstration for Xamarin Forms.
 
 ## INTRODUCTION
 Using the [AnimationNavPage Component](https://components.xamarin.com/view/customnavpage) we can demonstrate how to create a custom transition between different pages.
@@ -7,16 +7,16 @@ Using the [AnimationNavPage Component](https://components.xamarin.com/view/custo
 ![demo](https://github.com/bbl-Laobu/AnimatedTransitionNavPageDemo/raw/master/demo.gif)
 
 ## DESCRIPTION
-To demonstrate and achieve different types of Transitions between navigation pages, we are using the excellent ‘AnimationNavPage Component’ written by AlexandrNikulin (price $26). 
+To demonstrate and achieve different types of transitions between navigation pages, we are using the excellent ‘AnimationNavPage Component’ written by AlexandrNikulin (free trial or priced at $26). 
 
 Setting-up and using the component happens in 3 steps:	
 1.	Install and reference the DLL files for PCL, IOS and Android
-2.	Declare AnimationNavigationPage (instead of NavigationPage)
-3.	Create and Animation page (use interface or use XAML tags)
+2.	Declare AnimationNavigationPage
+3.	Create and Animation page
 
 
 ## INSTALL
-Download the ‘customnavpage’ package from https://components.xamarin.com/view/customnavpage . You can easily donwload a trial version from the site. Copy the included lib folder into your solution and link the following DLL’s to your different projects (PCL, Andoid and IOS) as shown below
+Download the ‘customnavpage’ package from https://components.xamarin.com/view/customnavpage . You can easily donwload a trial version from the site. Copy the included lib folder into your solution and link the following DLL’s to your different projects (PCL, Andoid and IOS) as shown below:
 
 ![PCL](https://github.com/bbl-Laobu/AnimatedTransitionNavPageDemo/raw/master/PCLRef.png) ![Android](https://github.com/bbl-Laobu/AnimatedTransitionNavPageDemo/raw/master/AndroidRef.png) ![IOS](https://github.com/bbl-Laobu/AnimatedTransitionNavPageDemo/raw/master/IOSRef.png)
 
@@ -33,9 +33,10 @@ public class App : Application
 }
 ```
 ## CREATE AND ANIMATION PAGE
-There are 2 ways to create an Animation Page:
+There are 3 ways to create an Animation Page:
 1.	Implement the IAnimationPage interface
-2.	Use XAML Tags 
+2.	Use XAML Tags - No Binding
+3. 	Use XAML Tags - With Binding
 
 ## OPTION 1 - Implement the IAnimationPage interface
 Firstly, add the interface declaration to your class definition as follows:
@@ -60,7 +61,7 @@ public void OnAnimationFinished(bool isPopAnimation)
 
 Note that depending on the type of transition you want, you can change FlipPageAnimation into SlidePageAnimation, FadePageAnimation… or whichever animation you require. Further configuration such as Duration and Subtype can be easily done.
 
-## OPTION 2 - Use XAML 
+## OPTION 2 - Use XAML no Binding 
 Firstly, make sure that the code behind inherits from AnimationPage:
 ```csharp  
 public partial class XamlNoBindingPage : AnimationPage
@@ -75,20 +76,20 @@ Next, use the <controls:AnimationPage> tag instead of the <ContentPage> tag as f
     Title="XAML No Binding">
 ```
 
-In the above case, we are not using binding so next we must declare a tag in the page to specify which transition we would like to use:
+Lastly, we must declare a tag in the page to specify which transition we would like to use:
 ```xaml
 <controls:AnimationPage.PageAnimation>
    <controls:RotatePageAnimation Duration="Medium" Subtype="FromLeft" />
 </controls:AnimationPage.PageAnimation>
 ```
 
-Notice that here we are declaring a RotatePageAnimation, but again we can pick whatever Animation we want and is available. Properties are available to further customize the animation (duration, subtype…).
+Notice that here we are declaring a RotatePageAnimation but again we can pick whatever Animation we want. Properties are also available to further customize the animation (duration, subtype…).
 
 After this you are now able to configure your page as you would in a normal content page.
 
 
-## OPTION 2b - Use XAML  with BINDING
-The component allows you to bind the PageAnimation. To do this declare the <controls:AnimationPage> as follows:
+## OPTION 3 - Use XAML with BINDING
+The component allows you to bind the PageAnimation property. To do this declare the <controls:AnimationPage> as follows:
 ```xaml 
 <controls:AnimationPage xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
@@ -99,7 +100,7 @@ The component allows you to bind the PageAnimation. To do this declare the <cont
     PageAnimation="{Binding MyPageAnimation}">
 ```
 
-In this case Your ViewModel should then have a ‘MyPageAnimation’ property defined:
+In this case Your ViewModel should then have a ‘MyPageAnimation’ property defined. We are using [Fody](https://github.com/Fody/PropertyChanged) so our simplified code looks like this:
 ```csharp 
 public IPageAnimation MyPageAnimation { get; set; }
 ```
@@ -114,6 +115,8 @@ MyPageAnimation = new SlidePageAnimation()
 ```
 
 Again, we can use different types of animations and further configure the properties.
+
+So, there you have it. A simple example on how to set-up Custom Transitions using 3 different implmentation techniques. 
 
 Enjoy and any question or improvements, please let me know.
 Laobu!
