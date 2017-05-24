@@ -116,13 +116,14 @@ MyPageAnimation = new SlidePageAnimation()
 
 Again, we can use different types of animations and further configure the properties.
 
-So, there you have it. A simple example on how to set-up Custom Transitions using 3 different implmentation techniques. 
+So, there you have it. A simple example on how to set-up Custom Transitions using 3 different implementation techniques. 
 
 Enjoy and any question or improvements, please let me know.
 Laobu!
 
 ## REFERENCES
 - ‘AnimationNavPage’ By AlexandrNikulin @ [https://components.xamarin.com/view/customnavpage   ](https://components.xamarin.com/view/customnavpage ) 
+- 'Fody/PropertyChanged' by SimonCropp @ [https://github.com/Fody/PropertyChanged] (https://github.com/Fody/PropertyChanged)
 
 
 ## AUTHOR
