@@ -20,6 +20,43 @@ Download the ‘customnavpage’ package from https://components.xamarin.com/vie
 
 ![PCL](https://github.com/bbl-Laobu/AnimatedTransitionNavPageDemo/raw/master/PCLRef.png) ![Android](https://github.com/bbl-Laobu/AnimatedTransitionNavPageDemo/raw/master/AndroidRef.png) ![IOS](https://github.com/bbl-Laobu/AnimatedTransitionNavPageDemo/raw/master/IOSRef.png)
 
+Next, add 'FormsControls.Touch.Main.Init()' into AppDelegate.cs of your Xamarin iOS Project:
+```csharp
+public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
+    {
+        public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+        {
+            global::Xamarin.Forms.Forms.Init();
+
+            FormsControls.Touch.Main.Init();
+
+            LoadApplication(new App());
+
+            return base.FinishedLaunching(app, options);
+        }
+    }
+```
+
+Finaly, add 'FormsControls.Droid.Main.Init()' into MainActivity.cs of your Xamarin Droid Project:
+```csharp
+public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    {
+        protected override void OnCreate(Bundle bundle)
+        {
+            TabLayoutResource = Resource.Layout.Tabbar;
+            ToolbarResource = Resource.Layout.Toolbar;
+
+            base.OnCreate(bundle);
+
+            global::Xamarin.Forms.Forms.Init(this, bundle);
+
+            FormsControls.Droid.Main.Init(this);
+
+            LoadApplication(new App());
+        }
+    }
+```
+
 ## DECLARE ANIMATIONNAVIGATIONPAGE
 In your App, declare your new main page as follows:
 ```csharp  
