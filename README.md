@@ -104,7 +104,7 @@ Firstly, make sure that the code behind inherits from AnimationPage:
 public partial class XamlNoBindingPage : AnimationPage
 ```
 
-Next, use the <controls:AnimationPage> tag instead of the <ContentPage> tag as follows: 
+Next, use the 'controls:AnimationPage' tag instead of the 'ContentPage' tag as follows: 
 ```xaml  
 <controls:AnimationPage xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
@@ -126,7 +126,7 @@ After this you are now able to configure your page as you would in a normal cont
 
 
 ## OPTION 3 - Use XAML with BINDING
-The component allows you to bind the PageAnimation property. To do this declare the <controls:AnimationPage> as follows:
+The component allows you to bind the PageAnimation property. To do this declare the 'controls:AnimationPage' as follows:
 ```xaml 
 <controls:AnimationPage xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
